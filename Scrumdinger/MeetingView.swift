@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+///Shows the meeting view and the duration each speaker has
 struct MeetingView: View {
     var body: some View {
         VStack {
