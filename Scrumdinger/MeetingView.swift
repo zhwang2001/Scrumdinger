@@ -14,15 +14,19 @@ struct MeetingView: View {
             ProgressView(value: 10, total: 15)
             HStack {
                 VStack (alignment: .leading) {
-                    Text("Seconds Elaspsed")
-                        .font(.caption)
                     Label("300", systemImage: "hourglass.tophalf.fill")
+                        .labelStyle(.trailingIcon(
+                            labelDescriptor: "Time Elapsed",
+                            alignment: .leading
+                        ))
                 }
                 Spacer()
                 VStack (alignment: .trailing) {
-                    Text("Seconds Remaining")
-                        .font(.caption)
                     Label("600", systemImage: "hourglass.tophalf.fill")
+                        .labelStyle(.trailingIcon(
+                            labelDescriptor: "Seconds Remaining",
+                            alignment: .trailing
+                        ))
                 }
             }
             .accessibilityElement(children: .ignore)
